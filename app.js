@@ -1,10 +1,24 @@
-function sayHello(userName, userLastname)
+function toCelsius(fahrenheit)
 {
-    return "Hello " + userName + userLastname
+    let value = (fahrenheit - 32) * 5 / 9
+    return value.toFixed(2) + " °C";
+   
 }
-function getAge()
+function display(elementId, value)
 {
-    return 25
+    document.getElementById(elementId).innerHTML = "<b>"+value+"</b>"
 }
-let userInput = prompt("Input your name :")
-alert(sayHello(userInput, " Janchang"))
+function tofahrenheit(celsius)
+{
+    let value = (celsius * 9) / 5 +32
+    return value.toFixed(2) + " °F";
+}
+
+function toCelsiusProgram(value)
+{
+    alert(toCelsius(value))
+}
+function tofahrenheitProgram(value)
+{
+    alert(tofahrenheit(value))
+}
